@@ -1,0 +1,10 @@
+#!/bin/bash
+
+pbuddy=/usr/libexec/plistbuddy
+
+file=/usr/local/<location>
+
+sudo "${pbuddy}" "${file}"
+
+sudo "${pbuddy}" -c "add :Name string Provision Status" "${file}"
+sudo "${pbuddy}" -c "add :Status string Not Provisioned" "${file}"
